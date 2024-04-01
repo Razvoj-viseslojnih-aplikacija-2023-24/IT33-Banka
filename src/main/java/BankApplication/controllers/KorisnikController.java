@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import BankApplication.models.Korisnik;
 import BankApplication.services.KorisnikService;
 
-
 @RestController
 public class KorisnikController {
 
