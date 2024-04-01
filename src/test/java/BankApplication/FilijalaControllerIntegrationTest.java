@@ -30,7 +30,6 @@ public class FilijalaControllerIntegrationTest {
 	TestRestTemplate template;
 
 	long largestId;
-
 	
 	public void createHighestId() {
 		ResponseEntity<List<Filijala>> response = template.exchange("/filijala", HttpMethod.GET, null,
