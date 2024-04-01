@@ -77,11 +77,13 @@ public class FilijalaControllerIntegrationTest {
 		assertEquals(id, filijala.getId());
 	}
 	
+
 	@Test
 	@Order(3)
-	void testFindFilijalaByAdresa() {
+	void testGetFilijalaByAdresa()
+	{
 		String adresa = "Ilije Ognjanovića 33, Novi Sad";
-		ResponseEntity<List<Filijala>> response = template.exchange("/filijala/addresa/" + adresa, HttpMethod.GET, null,
+		ResponseEntity<List<Filijala>> response = template.exchange("/filijala/adresa/" + adresa, HttpMethod.GET, null,
 				new ParameterizedTypeReference<List<Filijala>>(){});
 		int statusCode = response.getStatusCode().value();
 		List<Filijala> filijale =  response.getBody();
@@ -157,7 +159,8 @@ public class FilijalaControllerIntegrationTest {
 		assertEquals(largestId, response.getBody().getId());
 		assertEquals(200, response.getStatusCode().value());
 		
-		assertEquals(5, response.getBody().getBrojPpultova());
+		
+		assertEquals(6, response.getBody().getBrojPpultova());
 		assertTrue(response.getBody().isPosedujeSef());
 	}
 

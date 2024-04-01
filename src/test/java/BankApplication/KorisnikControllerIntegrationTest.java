@@ -111,7 +111,7 @@ public class KorisnikControllerIntegrationTest {
 		assertEquals(200, statusCode);
 		assertNotNull(korisnici.get(0));
 		for(Korisnik k : korisnici) {
-			assertTrue(k.getIme().contains(prezime));
+			assertTrue(k.getPrezime().contains(prezime));
 		}
 	}
 	
@@ -128,7 +128,7 @@ public class KorisnikControllerIntegrationTest {
 		assertEquals(200, statusCode);
 		assertNotNull(korisnici.get(0));
 		for(Korisnik k : korisnici) {
-			assertTrue(k.getIme().contains(maticniBroj));
+			assertTrue(k.getMaticni_broj().contains(maticniBroj));
 		}
 	}
 	

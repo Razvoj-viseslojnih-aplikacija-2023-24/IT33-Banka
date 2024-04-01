@@ -77,7 +77,7 @@ public class BankaControllerIntegrationTest {
 	
 	@Test
 	@Order(3)
-	void testgetBankaByPib() {
+	void testGetBankaByPib() {
 		int pib = 1208002;
 		ResponseEntity<List<Banka>> response = template.exchange(
 				"/banka/pib/" + pib, HttpMethod.GET, null, new 
@@ -97,7 +97,7 @@ public class BankaControllerIntegrationTest {
 	@Test
 	@Order(4)
 	void testgetBankaByNaziv() {
-		String naziv = "Komercijalna";
+		String naziv = "Halk";
 		ResponseEntity<List<Banka>> response = template.exchange(
 				"/banka/naziv/" + naziv, HttpMethod.GET, null, new 
 					ParameterizedTypeReference<List<Banka>>() {});
