@@ -15,6 +15,7 @@ import jakarta.persistence.SequenceGenerator;
 @Entity
 public class Banka implements Serializable {
 
+	
 	private static final long serialVersionUID = 1L;
 	@Id
 	@SequenceGenerator(name = "BANKA_SEQ_GENERATOR", sequenceName = "BANKA_SEQ", allocationSize = 1)
