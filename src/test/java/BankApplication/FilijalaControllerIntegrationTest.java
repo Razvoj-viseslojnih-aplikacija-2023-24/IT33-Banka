@@ -31,6 +31,7 @@ public class FilijalaControllerIntegrationTest {
 
 	long largestId;
 
+	
 	public void createHighestId() {
 		ResponseEntity<List<Filijala>> response = template.exchange("/filijala", HttpMethod.GET, null,
 				new ParameterizedTypeReference<List<Filijala>>() {
