@@ -51,31 +51,30 @@ public class BankaController {
 		return ResponseEntity.ok(banka);
 	}
 	
-	@GetMapping("/bank/pib/{pib}")
+	@GetMapping("/banka/pib/{pib}")
 	public ResponseEntity<?> getBankaByPib(@PathVariable int pib){
 		List<Banka> banka = service.getBankaByPib(pib);
 		if(banka.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Resources"
-					+ " with pib: " + pib + " could not be found.");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Resources" + " with PIB: " + pib + " could not be found.");
 		}
 		return ResponseEntity.ok(banka);
 	}
 	
-	@PostMapping("/bank")
+	@PostMapping("/banka")
 	public ResponseEntity<?> createBanka(@RequestBody Banka banka){
 		if(service.existsById(banka.getId())) {
 			return ResponseEntity.status(409).body("Resource already exists!");
 		}
 		Banka savedBanka = service.create(banka);
-		URI uri = URI.create("/banka/id/" + savedBanka.getId());
+		URI uri = URI.create("/banka/" + savedBanka.getId());
 		return ResponseEntity.created(uri).body(savedBanka);
 	}
 	
-	@PutMapping("/bank/id/{id}")
+	@PutMapping("/banka/id/{id}")
 	public ResponseEntity<?> updateBanka(@RequestBody Banka banka, @PathVariable int id){
 		Optional<Banka> updatedBanka = service.update(banka, id);
 		if(updatedBanka.isPresent()) {
-			return ResponseEntity.ok(updatedBanka.get());
+			return ResponseEntity.ok(updatedBanka);
 		}
 		return ResponseEntity.status(404).body("Resource with requested ID: " + id + " could not be" + 
 				" updated because it does not exist!");

@@ -78,7 +78,7 @@ public class BankaControllerIntegrationTest {
 	@Test
 	@Order(3)
 	void testGetBankaByPib() {
-		int pib = 1208002;
+		int pib = 951753824;
 		ResponseEntity<List<Banka>> response = template.exchange(
 				"/banka/pib/" + pib, HttpMethod.GET, null, new 
 					ParameterizedTypeReference<List<Banka>>() {});
@@ -171,7 +171,7 @@ public class BankaControllerIntegrationTest {
 		int statusCode = response.getStatusCode().value();
 		
 		assertEquals(200, statusCode);
-		assertTrue(response.getBody().contains("has been deleted."));
+		assertTrue(response.getBody().contains("has been deleted!"));
 				
 	}
 }
