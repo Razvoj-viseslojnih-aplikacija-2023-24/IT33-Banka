@@ -41,6 +41,7 @@ public class BankaController {
 		id + " does not exist.");
 	}
 	
+	
 	@GetMapping("/banka/naziv/{naziv}")
 	public ResponseEntity<?> getBankaByNaziv(@PathVariable String naziv){
 		List<Banka> banka = service.getBankaByNaziv(naziv);
