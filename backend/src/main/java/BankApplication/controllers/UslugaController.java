@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +22,8 @@ import BankApplication.services.FilijalaService;
 import BankApplication.services.KorisnikService;
 import BankApplication.services.UslugaService;
 
-
+@CrossOrigin //anotacija koja se dodaje da bismo kada pokrenemo aplikaciju mogli da vidimo sve podatke. 
+//bez ove anotacije backend ne dozvoljava deljenje informacija i podataka
 @RestController
 public class UslugaController {
 
