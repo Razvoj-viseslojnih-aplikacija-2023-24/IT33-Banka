@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ArtiklComponent } from './main/artikl/artikl.component';
+import { DobavljacComponent } from './main/dobavljac/dobavljac.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtiklComponent
+    ArtiklComponent,
+    DobavljacComponent
   ],
   imports: [
     BrowserModule,
