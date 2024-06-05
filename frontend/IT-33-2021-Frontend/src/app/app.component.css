@@ -1,24 +1,28 @@
 .container {
-    display: flex;
-    flex-basis: column;
-  }
+  display: flex;
+  flex-basis: column;
+}
 
-  .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 1px solid black;
-    cursor: pointer;
-  }
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  cursor: pointer;
+}
 
-  .example-button-row {
-    display: flex;
-    align-items: left;
-  }
+mat-nav-list a{
+  transition: all ease-in 0.1s;
+}
 
-  .mat-button {
-    text-align: left;
-    display: block;
-  } 
+mat-nav-list a:hover {
+  background-color: light pink;
+  font-weight: 100;
+  color: white;
+  opacity: 0.8;
+  border: 1px solid #f86182;
+}
+
+

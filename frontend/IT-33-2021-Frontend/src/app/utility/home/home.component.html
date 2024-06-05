@@ -1,1 +1,38 @@
-<p>home works!</p>
+<mat-toolbar color="primary" class="title-wrapper">
+    <span class="title">Home</span>
+    <mat-icon>home</mat-icon>
+  </mat-toolbar>
+    <div class="box-wrapper">
+      <div class="box">
+        <div class="box-title">Banka</div>
+        <button mat-raised-button class="custom-button" (click)="navigate('/banka')">Otvori</button>
+      </div>
+      <div class="box">
+        <div class="box-title">Filijala</div>
+        <button mat-raised-button class="custom-button" (click)="navigate('/filijala')">Otvori</button>
+      </div>
+      <div class="box">
+        <div class="box-title">Korisnik</div>
+        <button mat-raised-button class="custom-button" (click)="navigate('/korisnik')">Otvori</button>
+      </div>
+    </div>
+  <!-- </div>  -->
+   <!-- <mat-toolbar color="primary" class="title-wrapper">
+    <span class="title">Home</span>
+    <mat-icon>home</mat-icon>
+  </mat-toolbar>
+  
+  <div class="container">
+    <div class="box-wrapper">
+      <div class="box">
+        <app-card [title]="'Korisnik'" [icon]="'location_pin'" [path]="'korisnik'"></app-card>
+      </div>
+      <div class="box">
+        <app-card [title]="'Banka'" [icon]="'hotel'" [path]="'banka'"></app-card>
+      </div>
+      <div class="box">
+        <app-card [title]="'Filijala'" [icon]="'work'" [path]="'filijala'"></app-card>
+      </div>
+    </div>
+    <p></p>
+  </div> -->
