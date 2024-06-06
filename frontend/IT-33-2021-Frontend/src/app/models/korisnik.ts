@@ -4,5 +4,5 @@ export class Korisnik{
     id!:number;
     ime!: string;
     prezime!: string;
-    maticniBroj!: string;
+    maticni_broj!: string;
 }

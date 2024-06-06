@@ -26,7 +26,9 @@ export class KorisnikdialogComponent {
 
   public add() {
     this.service.createKorisnik(this.data).subscribe({
+      
       next: (data) => {
+        console.log(data);
         this.snackBar.open(
           `Korisnik sa imenom ${data.ime} je dodat!`,
           'Zatvori!',

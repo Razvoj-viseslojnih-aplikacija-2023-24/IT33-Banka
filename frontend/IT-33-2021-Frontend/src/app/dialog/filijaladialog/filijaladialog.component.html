@@ -13,15 +13,15 @@
     </div>
   
     <div class = "form">
-      <mat-checkbox name ="BrojPultova" [disabled]="flag==3" [(ngModel)]="data.brojPultova">
-        Broj Pultova
+      <mat-checkbox name ="posedujeSef" [disabled]="flag==3" [(ngModel)]="data.posedujeSef">
+        Poseduje Sefa
       </mat-checkbox>
     </div>
 
     <div class = "form">
         <mat-form-field>
-          <input matInput placeholder="PosedujeSef" name="posedujeSef" [disabled]="flag==3" [(ngModel)]="data.posedujeSef" required />
-          <span matSuffix> Poseduje Sef </span>
+          <input matInput placeholder="Broj pultova" name="brojPultova" [disabled]="flag==3" [(ngModel)]="data.brojPultova" required />
+          <span matSuffix> Broj pultova</span>
         </mat-form-field>
       </div>
   

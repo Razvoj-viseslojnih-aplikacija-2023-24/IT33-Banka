@@ -3,7 +3,7 @@ import { UslugadialogComponent } from './../../dialog/uslugadialog/uslugadialog.
 import { UslugaService } from './../../services/usluga.service';
 import { Usluga } from './../../models/usluga';
 import { Korisnik } from './../../models/korisnik';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';

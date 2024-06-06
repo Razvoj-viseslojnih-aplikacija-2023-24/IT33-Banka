@@ -1,46 +1,53 @@
 mat-cell:nth-child(1),
-mat-header-cell:nth-child(1){
+mat-header-cell:nth-child(1) {
   display: flex;
   justify-content: center;
-  flex: 0 0 5%;
+  flex: 0 0 10%;
 }
 
 mat-cell:nth-child(2),
-mat-header-cell:nth-child(2){
+mat-header-cell:nth-child(2) {
   display: flex;
   justify-content: center;
-  flex: 0 0 55%;
+  flex: 0 0 30%;
 }
 
 mat-cell:nth-child(3),
-mat-header-cell:nth-child(3){
+mat-header-cell:nth-child(3) {
   display: flex;
   justify-content: center;
-  flex: 0 0 15%;
+  flex: 0 0 20%;
 }
-
-mat-cell:nth-child(4),
-mat-header-cell:nth-child(4){
-  display: flex;
-  justify-content: center;
-  flex: 0 0 25%;
-}
-
 
 .title-center {
   margin: 0 auto;
 }
 
-.filter-field{
+.filter-field {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .filter-field mat-form-field {
-  maring:20px 30px 0 0;
-  border:2px solid #bc2158;
+  margin-right: 10px;
+  border: 2px solid #bc2158;
+  border-radius: 8px;
 }
 
-.mat-paginator{
-  maring-top:24px;
+.mat-paginator {
+  margin-top: 24px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #bc2158;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #bc2158;
+}
+
+.mat-icon-button {
+  margin-left: 10px;
 }

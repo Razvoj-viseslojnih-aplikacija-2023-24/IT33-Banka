@@ -42,6 +42,7 @@ export class FilijalaComponent implements OnInit, OnDestroy{
   public loadData(){
     this.subscription = this.service.getAllFilijalas().subscribe(
       (data) => {
+        // console.log(JSON.stringify(data));
         this.dataSource = new MatTableDataSource(data);
       }
     ),
