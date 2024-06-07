@@ -16,21 +16,22 @@ import { Usluga } from 'src/app/models/usluga';
 export class UslugadialogComponent {
 
   flag!: number;
-  korisnici!: Korisnik[];
+  korisnici! : Korisnik[]; 
 
   constructor(
     public snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<Usluga>,
     @Inject(MAT_DIALOG_DATA) public data: Usluga,
     public service: UslugaService,
-    public uslugaService: UslugaService
+    public korisnikService: KorisnikService
   ) {}
 
   ngOnInit(): void {
-    this.uslugaService.getAllUsluge().subscribe((data) => {
+    this.korisnikService.getAllKorisnik().subscribe((data) => {
       this.korisnici = data;
     });
   }
+
 
   public compare(a:any, b:any) {
     return a.id == b.id;
@@ -38,7 +39,7 @@ export class UslugadialogComponent {
 
   public cancel() {
     this.dialogRef.close();
-    this.snackBar.open('Change canceled!', 'Close', { duration: 1000 });
+    this.snackBar.open('Promene otkazane!', 'Zatvori!', { duration: 1000 });
   }
 
   public add() {
@@ -84,13 +85,13 @@ export class UslugadialogComponent {
   public delete() {
     this.service.deleteUsluga(this.data.id).subscribe({
       next: (data) => {
-        this.snackBar.open(`Arrangement with id ${data.id} deleted!`, 'Close', {
+        this.snackBar.open(`Uslluga sa id ${data.id} obrisana!`, 'Zatvori!', {
           duration: 1000,
         });
       },
       error: (err) => {
         console.error(err);
-        this.snackBar.open('Deleting unsuccessful!', 'Close', {
+        this.snackBar.open('Neuspešno brisanje!', 'Zatvori!', {
           duration: 1000,
         });
       },

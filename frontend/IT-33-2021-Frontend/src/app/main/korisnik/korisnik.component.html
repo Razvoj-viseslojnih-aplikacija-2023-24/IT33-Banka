@@ -22,16 +22,23 @@
       <mat-header-cell mat-sort-header *matHeaderCellDef>ID</mat-header-cell>
       <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
     </ng-container>
+
     <ng-container matColumnDef="ime">
-      <mat-header-cell mat-sort-header *matHeaderCellDef>Ime</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{ row.ime }}</mat-cell>
+      <mat-header-cell mat-sort-header *matHeaderCellDef>Ime 
+        <!-- <button mat-icon-button (click)="sortByName('ime')">
+        <mat-icon>sort</mat-icon>
+        </button> -->
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.ime }} </mat-cell>
     </ng-container>
+
     <ng-container matColumnDef="prezime">
-      <mat-header-cell *matHeaderCellDef>Prezime</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{ row.prezime }}</mat-cell>
+      <mat-header-cell mat-sort-header *matHeaderCellDef>Prezime</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.prezime }} </mat-cell>
     </ng-container>
+    
     <ng-container matColumnDef="maticniBroj">
-      <mat-header-cell *matHeaderCellDef>Matični broj</mat-header-cell>
+      <mat-header-cell mat-sort-header *matHeaderCellDef>Matični broj</mat-header-cell>
       <mat-cell *matCellDef="let row">{{ row.maticni_broj }}</mat-cell>
     </ng-container>
     <ng-container matColumnDef="actions">

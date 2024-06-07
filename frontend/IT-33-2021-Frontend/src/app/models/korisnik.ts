@@ -5,4 +5,5 @@ export class Korisnik{
     ime!: string;
     prezime!: string;
     maticni_broj!: string;
+    // [key: string]: any; // Indeksni potpisni niz
 }

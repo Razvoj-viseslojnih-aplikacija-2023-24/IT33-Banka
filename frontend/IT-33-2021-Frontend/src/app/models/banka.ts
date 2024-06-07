@@ -3,4 +3,5 @@ export class Banka{
     naziv!: string;
     kontakt!: string;
     pib!: number;
+    [key: string]: any; // Indeksni potpisni niz
 }

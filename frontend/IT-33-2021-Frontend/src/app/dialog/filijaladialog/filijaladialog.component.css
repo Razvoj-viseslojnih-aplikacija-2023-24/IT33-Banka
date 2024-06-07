@@ -51,7 +51,7 @@
   .mat-dialog-actions button {
     padding: 12px; /* Ensure padding is consistent */
     font-size: 1rem; /* 16px */
-    color: #fff;
+    color: black !important;
     border: none;
     border-radius: 6px;
     font-weight: 700; /* Moved to common button styles */
@@ -61,7 +61,7 @@
     background-color: rgb(49, 172, 71);
   }
   
-  .mat-dialog-actions button:last-child {
+  .mat-dialog-actions button:last-child { 
     background-color: rgb(234, 46, 46);
   }
   

@@ -37,7 +37,6 @@ import { FilijaladialogComponent } from './dialog/filijaladialog/filijaladialog.
 import { UslugadialogComponent } from './dialog/uslugadialog/uslugadialog.component';
 import { UslugaComponent } from './main/usluga/usluga.component';
 import { HomeComponent } from './utility/home/home.component';
-//import { CardComponent } from './utility/card/card.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +52,6 @@ import { HomeComponent } from './utility/home/home.component';
     UslugadialogComponent,
     UslugaComponent,
     HomeComponent,
-    //CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +82,7 @@ import { HomeComponent } from './utility/home/home.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  // schemas: [
+    // schemas: [
   //   CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA
   // ]
 })

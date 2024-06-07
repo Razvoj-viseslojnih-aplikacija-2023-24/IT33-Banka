@@ -19,6 +19,9 @@ export class KorisnikdialogComponent {
     public service: KorisnikService
   ) {}
 
+
+
+
   public cancel() {
     this.dialogRef.close();
     this.snackBar.open('Odustali ste od izmena!', 'Zatvori', { duration: 1000 });

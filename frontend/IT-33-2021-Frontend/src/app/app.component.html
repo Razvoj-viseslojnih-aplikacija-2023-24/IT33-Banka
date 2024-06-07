@@ -1,4 +1,4 @@
-<mat-sidenav-container class="example-container">
+<!-- <mat-sidenav-container class="example-container">
   <mat-sidenav mode="over" [fixedInViewport]="true" opened mode="side">
     <mat-accordion>
       <a mat-button [routerLink]="['/home']">
@@ -44,59 +44,50 @@
   </mat-sidenav>
   <router-outlet></router-outlet>
 </mat-sidenav-container> 
- <!-- <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="over" [fixedInViewport]="true" opened mode="side">
-    <mat-accordion>
-      <a mat-button [routerLink]="['/home']">
-        <mat-icon>home</mat-icon>
-      </a>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title> App </mat-panel-title>
-          <mat-panel-description style="text-align: center">
-            Aplikacija za vodjenje evidencije banke
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <mat-nav-list>
-          <a mat-raised-button color="primary" [routerLink]="['/banka']"
-            ><mat-icon>location_pin</mat-icon>Banka</a
-          >
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-raised-button color="primary" [routerLink]="['/filijala']"
-            ><mat-icon>hotel</mat-icon>Filijala</a
-          >
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-raised-button color="primary" [routerLink]="['/korisnik']"
-            ><mat-icon>work</mat-icon>Korisnik</a
-          >
-        </mat-nav-list>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title style="text-align: left">Info</mat-panel-title>
-          <mat-panel-description style="text-align: center">
-            Osnovne informacije o aplikaciji
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <mat-nav-list>
-          <a mat-stroked-button [routerLink]="['/about']"
-            ><mat-icon>info</mat-icon>About</a
-          >
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-stroked-button [routerLink]="['/author']"
-            ><mat-icon>person</mat-icon>Author</a
-          >
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-stroked-button [routerLink]="['/home']"
-            ><mat-icon>home</mat-icon>Home</a
-          >
-        </mat-nav-list>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </mat-sidenav>
-  <router-outlet></router-outlet>
-</mat-sidenav-container> -->
+  -->
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="over" [fixedInViewport]="true" opened mode="side">
+      <mat-accordion>
+        <a mat-button [routerLink]="['/home']">
+          <mat-icon>home</mat-icon><h1>Home</h1>
+        </a>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Aplikacija </mat-panel-title>
+            <mat-panel-description>
+              Aplikacija za vodjenje evidencije banke
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-raised-button color="accent" routerLink="/banka"><mat-icon>money</mat-icon>Banka</a>
+          </mat-nav-list>
+          <mat-nav-list>
+            <a mat-raised-button color="accent" routerLink="/korisnik"><mat-icon>person</mat-icon>Korisnik</a>
+          </mat-nav-list>
+          <mat-nav-list>
+            <a mat-raised-button color="accent" routerLink="/filijala"><mat-icon>location_pin</mat-icon>Filijala</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title style="text-align: left">Informacije</mat-panel-title>
+            <mat-panel-description>
+              Osnovne informacije o aplikaciji
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-raised-button color="accent" routerLink="/about"><mat-icon>info</mat-icon>O nama</a>
+          </mat-nav-list>
+          <mat-nav-list>
+            <a mat-raised-button color="accent" routerLink="/author"><mat-icon>person</mat-icon>Autor</a>
+          </mat-nav-list>
+          <mat-nav-list>
+            <a mat-raised-button color="accent" routerLink="/home"><mat-icon>home</mat-icon>Pocetna</a>
+          </mat-nav-list>
+       
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+  

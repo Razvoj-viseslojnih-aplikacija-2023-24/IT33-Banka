@@ -33,10 +33,13 @@
        <div class="form">
         <mat-select [compareWith]="compare" class="form-field" placeholder="Korisnik" name="korisnik" [disabled]="flag==3" [(ngModel)]="data.korisnik" required>
             <mat-option *ngFor="let korisnik of korisnici" [value]="korisnik">
-            {{korisnik.ime}}
+            {{korisnik.ime}} {{korisnik.prezime}} ({{korisnik.id}})
             </mat-option>
         </mat-select>
     </div>
+
+
+    
     </form>
   
     <div class="form-field mat-dialog-actions">

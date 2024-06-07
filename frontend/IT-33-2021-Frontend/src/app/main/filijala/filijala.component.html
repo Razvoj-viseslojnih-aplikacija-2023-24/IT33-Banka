@@ -8,7 +8,7 @@
       <mat-icon matPrefix>search</mat-icon>
       <input
         matInput
-        placeholder="Pretraga..."
+        placeholder="Pretraži..."
         name="filterField"
         (keyup)="applyFilter($event)"
       />
@@ -19,25 +19,24 @@
   </div>
 
   <div class="container mat-elevation-z8">
-    <mat-table [dataSource]="dataSource" class="mat-cell">
-
+    <mat-table [dataSource]="dataSource" class="mat-cell" matSort>
       <ng-container matColumnDef="id">
-        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>ID</mat-header-cell>
         <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="adresa">
-        <mat-header-cell *matHeaderCellDef>Adresa</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>Adresa</mat-header-cell>
         <mat-cell *matCellDef="let row">{{ row.adresa }}</mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="brojPultova">
-        <mat-header-cell *matHeaderCellDef>Broj Pultova</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>Broj pultova</mat-header-cell>
         <mat-cell *matCellDef="let row">{{ row.brojPpultova}}</mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="posedujeSef">
-        <mat-header-cell *matHeaderCellDef>Poseduje Sef</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef>Poseduje šefa</mat-header-cell>
         <mat-cell [style.color]="row.posedujeSef ? 'Green' : 'Red'" *matCellDef="let row">{{ row.posedujeSef ? 'Da' : 'Ne' }}</mat-cell>
       </ng-container>
 
@@ -50,11 +49,14 @@
       <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef>Akcije</mat-header-cell>
         <mat-cell *matCellDef="let row; let i = index">
-          <button mat-icon-button color="primary" (click)="openDialog(2, row.id, row.adresa, row.brojPultova, row.posedujeSef, row.banka)">
-            <mat-icon color="primary" aria-label="Edit">edit</mat-icon>
+          <!-- <button mat-icon-button color="accent" (click)="openDialog(1)">
+            <mat-icon>add</mat-icon>
+          </button> -->
+          <button mat-icon-button color="accent" (click)="openDialog(2, row.id, row.adresa, row.brojPultova, row.posedujeSef, row.banka)">
+            <mat-icon color="accent" aria-label="Edit">edit</mat-icon>
           </button>
-          <button mat-icon-button color="warn" (click)="openDialog(3, row.id, row.adresa, row.brojPultova, row.posedujeSef, row.banka)">
-            <mat-icon color="warn" aria-label="Delete">delete</mat-icon>
+          <button mat-icon-button color="accent" (click)="openDialog(3, row.id, row.adresa, row.brojPultova, row.posedujeSef, row.banka)">
+            <mat-icon color="accent" aria-label="Delete">delete</mat-icon>
           </button>
         </mat-cell>
       </ng-container>

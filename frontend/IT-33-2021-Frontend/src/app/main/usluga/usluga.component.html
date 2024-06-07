@@ -3,15 +3,15 @@
   </mat-toolbar>
   
   <div class="container mat-elavation-z8">
-    <mat-table #table [dataSource]="dataSource" class="mat-cell">
+    <mat-table #table [dataSource]="dataSource" class="mat-cell" matSort>
       <!--ID-->
       <ng-container matColumnDef="id">
-        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>ID</mat-header-cell>
         <mat-cell *matCellDef="let row">{{ row.id }}</mat-cell>
       </ng-container>
         
       <ng-container matColumnDef="naziv">
-        <mat-header-cell *matHeaderCellDef>Naziv</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>Naziv</mat-header-cell>
         <mat-cell *matCellDef="let row">{{ row.naziv}}</mat-cell>
       </ng-container>
      
@@ -21,12 +21,12 @@
       </ng-container>
  
       <ng-container matColumnDef="datumUgovora">
-        <mat-header-cell *matHeaderCellDef>Datum Ugovora</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>Datum Ugovora</mat-header-cell>
         <mat-cell *matCellDef="let row">{{row.datum_ugovora | date : "dd.MM.yyyy"}}</mat-cell>
       </ng-container>
     
       <ng-container matColumnDef="provizija">
-        <mat-header-cell *matHeaderCellDef>Provizija</mat-header-cell>
+        <mat-header-cell mat-sort-header *matHeaderCellDef>Provizija</mat-header-cell>
         <mat-cell *matCellDef="let row">{{ row.provizija }}</mat-cell>
       </ng-container>
       <!-- Korisnik -->
@@ -43,10 +43,10 @@
         </mat-header-cell>
         <mat-cell *matCellDef="let row; let i = index">
           <button mat-icon-button color="primary" (click)="openDialog(2,row.id, row.naziv ,row.opisUsluge ,row.datumUgovora, row.provizija ,row.korisnik)">
-            <mat-icon color="primary">edit</mat-icon>
+            <mat-icon color="accent">edit</mat-icon>
           </button>
           <button mat-icon-button color="primary" (click)="openDialog(3,row.id, row.naziv ,row.opisUsluge ,row.datumUgovora, row.provizija ,row.korisnik)">
-            <mat-icon color= "warn" aria-label="Delete">delete</mat-icon>
+            <mat-icon color= "accent" aria-label="Delete">delete</mat-icon>
           </button>
         </mat-cell>
       </ng-container>
