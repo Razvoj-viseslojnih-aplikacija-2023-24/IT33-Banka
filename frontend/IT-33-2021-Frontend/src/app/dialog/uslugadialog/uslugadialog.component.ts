@@ -39,7 +39,7 @@ export class UslugadialogComponent {
 
   public cancel() {
     this.dialogRef.close();
-    this.snackBar.open('Promene otkazane!', 'Zatvori!', { duration: 1000 });
+    this.snackBar.open('Odustali ste od izmena!', 'Zatvori!', { duration: 1000 });
   }
 
   public add() {

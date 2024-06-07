@@ -42,7 +42,7 @@ export class KorisnikdialogComponent {
       },
       error: (err) => {
         console.error(err);
-        this.snackBar.open('Neuspesno dodavanje!', 'Zatvori', {
+        this.snackBar.open('Neuspešno dodavanje!', 'Zatvori', {
           duration: 1000,
         });
       },
@@ -53,7 +53,7 @@ export class KorisnikdialogComponent {
     this.service.updateKorisnik(this.data).subscribe({
       next: (data) => {
         this.snackBar.open(
-          `Korisnik sa imenom ${data.ime} je uspesno azuriran!`,
+          `Korisnik sa imenom ${data.ime} je uspešno ažuriran!`,
           'Zatvori',
           {
             duration: 1000,
@@ -62,7 +62,7 @@ export class KorisnikdialogComponent {
       },
       error: (err) => {
         console.error(err);
-        this.snackBar.open('Neuspesno azuriranje!', 'Zatvori', {
+        this.snackBar.open('Neuspešno ažuriranje!', 'Zatvori', {
           duration: 1000,
         });
       },

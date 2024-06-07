@@ -23,21 +23,21 @@ export class BankadialogComponent {
   public add(){
     this.service.createBanka(this.data).subscribe(
       (data) => {
-        this.snackBar.open(`Uspesno dodata banka sa nazivom: ${this.data.naziv}`,
-                            `U redu`, {duration:2500});
+        this.snackBar.open(`Uspešno dodata banka sa nazivom: ${this.data.naziv}`,
+                            `U redu!`, {duration:2500});
       }
     ),
     (error:Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open(`Neuspesno dodavanje`, `Zatvori`, {duration:1000});
+      this.snackBar.open(`Neuspešno dodavanje`, `Zatvori!`, {duration:1000});
     }
   }
 
   public update(){
     this.service.updateBanka(this.data).subscribe(
       (data) => {
-        this.snackBar.open(`Uspesno azurirana banka sa nazivom: ${this.data.naziv}`,
-                            `U redu`, {duration:2500});
+        this.snackBar.open(`Uspešno ažurirana banka sa nazivom: ${this.data.naziv}`,
+                            `U redu!`, {duration:2500});
       }
     ),
     (error:Error) => {
@@ -55,12 +55,12 @@ export class BankadialogComponent {
     ),
     (error:Error) => {
       console.log(error.name + ' ' + error.message);
-      this.snackBar.open(`Neuspesno brisanje`, `Zatvori`, {duration:1000});
+      this.snackBar.open(`Neuspešno brisanje!`, `Zatvori!`, {duration:1000});
     }
   }
 
   public cancel(){
     this.dialogRef.close();
-    this.snackBar.open(`Odustali ste od izmena`, `Zatvori`, {duration:2500});
+    this.snackBar.open(`Odustali ste od izmena`, `Zatvori!`, {duration:2500});
   }
 }
