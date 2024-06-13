@@ -37,7 +37,7 @@
       <mat-cell *matCellDef="let row"> {{ row.prezime }} </mat-cell>
     </ng-container>
     
-    <ng-container matColumnDef="maticniBroj">
+    <ng-container matColumnDef="maticni_broj">
       <mat-header-cell mat-sort-header *matHeaderCellDef>Matični broj</mat-header-cell>
       <mat-cell *matCellDef="let row">{{ row.maticni_broj }}</mat-cell>
     </ng-container>
@@ -47,11 +47,11 @@
         <button
           mat-icon-button
           color="accent"
-          (click)="openDialog(2, row.id, row.ime, row.prezime, row.maticniBroj)"
+          (click)="openDialog(2, row.id, row.ime, row.prezime, row.maticni_broj)"
         >
           <mat-icon color="accent" aria-label="Edit">edit</mat-icon>
         </button>
-        <button mat-icon-button color="accent" (click)="openDialog(3, row.id, row.ime, row.prezime, row.maticniBroj)">
+        <button mat-icon-button color="accent" (click)="openDialog(3, row.id, row.ime, row.prezime, row.maticni_broj)">
           <mat-icon color="about" aria-label="Delete">delete</mat-icon>
         </button>
       </mat-cell>

@@ -12,15 +12,15 @@
   
        <div class="form">
         <mat-form-field class="form-field">
-            <input matInput placeholder="opisUsluge" name="openDialog" [disabled]="flag==3" [(ngModel)]="data.opisUsluge" required />
+            <input matInput placeholder="Opis usluge" name="Opis usluge" [disabled]="flag==3" [(ngModel)]="data.opis_usluge" required />
         </mat-form-field>
        </div>
   
        <div class="form">
         <mat-form-field class="form-field">
-            <input matInput placeholder="datumUgovora" name="datumUgovora" [disabled]="flag==3" [(ngModel)]="data.datumUgovora" required />
-            <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
-            <mat-datepicker #date></mat-datepicker>
+            <input matInput  [matDatepicker]="datumUgovora" placeholder="Datum ugovora" name="Datum ugovora" [disabled]="flag==3" [(ngModel)]="data.datum_ugovora" required />
+            <mat-datepicker-toggle matSuffix [for]="datumUgovora"></mat-datepicker-toggle>
+            <mat-datepicker #datumUgovora></mat-datepicker>
         </mat-form-field>
        </div>
   

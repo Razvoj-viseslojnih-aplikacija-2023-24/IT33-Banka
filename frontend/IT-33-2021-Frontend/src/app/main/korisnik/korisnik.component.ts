@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./korisnik.component.css']
 })
 export class KorisnikComponent implements OnInit, OnDestroy{
-  displayedColumns = ['id', 'ime', 'prezime', 'maticniBroj' , 'actions'];
+  displayedColumns = ['id', 'ime', 'prezime', 'maticni_broj' , 'actions'];
   dataSource!:MatTableDataSource<Korisnik>;
   subscription!:Subscription;
 
@@ -43,8 +43,8 @@ export class KorisnikComponent implements OnInit, OnDestroy{
     }
   }
 
-  public openDialog(flag:number, id?:number, ime?:string, prezime?: string, maticniBroj?:string) {
-    const dialogRef = this.dialog.open(KorisnikdialogComponent, {data : {id, ime, prezime, maticniBroj}});
+  public openDialog(flag:number, id?:number, ime?:string, prezime?: string, maticni_broj?:string) {
+    const dialogRef = this.dialog.open(KorisnikdialogComponent, {data : {id, ime, prezime, maticni_broj}});
     dialogRef.componentInstance.flag = flag;
     dialogRef.afterClosed().subscribe(
       (result) => {

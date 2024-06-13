@@ -69,7 +69,7 @@ export class UslugaComponent {
       data: { id, naziv, opisUsluge, datumUgovora, provizija, korisnik },
     });
     dialogRef.componentInstance.flag = flag;
-    //dialogRef.componentInstance.data.filijala = this.childSelectedFilijala;
+    dialogRef.componentInstance.data.filijala = this.childSelectedFilijala;
     dialogRef.afterClosed().subscribe((result) => {
       if (result == 1) {
         this.loadData();

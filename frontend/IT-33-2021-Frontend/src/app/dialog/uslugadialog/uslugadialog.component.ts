@@ -28,6 +28,7 @@ export class UslugadialogComponent {
 
   ngOnInit(): void {
     this.korisnikService.getAllKorisnik().subscribe((data) => {
+      
       this.korisnici = data;
     });
   }
@@ -45,6 +46,7 @@ export class UslugadialogComponent {
   public add() {
     this.service.addUsluga(this.data).subscribe({
       next: (data) => {
+        console.log(JSON.stringify(data))
         this.snackBar.open(
           `Usluga sa id ${data.id} je kreirana!`,
           'Zatvori!',

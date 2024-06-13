@@ -32,7 +32,7 @@
       <!-- Korisnik -->
       <ng-container matColumnDef="korisnik">
         <mat-header-cell *matHeaderCellDef>Korisnik</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.korisnik.ime }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.korisnik.ime }} {{row.korisnik.prezime}}</mat-cell>
       </ng-container>
       <!-- Action Buttons -->
       <ng-container matColumnDef="actions">
@@ -42,10 +42,10 @@
           </button>
         </mat-header-cell>
         <mat-cell *matCellDef="let row; let i = index">
-          <button mat-icon-button color="primary" (click)="openDialog(2,row.id, row.naziv ,row.opisUsluge ,row.datumUgovora, row.provizija ,row.korisnik)">
+          <button mat-icon-button color="primary" (click)="openDialog(2,row.id, row.naziv ,row.opis_usluge ,row.datum_ugovora, row.provizija ,row.korisnik)">
             <mat-icon color="accent">edit</mat-icon>
           </button>
-          <button mat-icon-button color="primary" (click)="openDialog(3,row.id, row.naziv ,row.opisUsluge ,row.datumUgovora, row.provizija ,row.korisnik)">
+          <button mat-icon-button color="primary" (click)="openDialog(3,row.id, row.naziv ,row.opis_usluge ,row.datum_ugovora, row.provizija ,row.korisnik)">
             <mat-icon color= "accent" aria-label="Delete">delete</mat-icon>
           </button>
         </mat-cell>
